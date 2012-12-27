@@ -1,0 +1,21 @@
+name: ${project.name}
+version: ${buildNumber}
+description: ${project.description}
+author: ${author}
+website: ${project.url}
+
+main: net.krsmes.bukkit.plugins.permissions.KrsmesPermissionsPlugin
+load: startup
+
+commands:
+    perm:
+        aliases: [permission]
+        description: Run a permission command.
+        #permission: krsmesPermissions.plugin.command
+        usage: |
+            Usage: /<command> text
+
+permissions:
+    krsmesPermissions.plugin.command:
+        description: Allow player to run permissions command
+        default: false
